@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jaro", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(to top right, rgba(0, 0, 0), white, rgba(0, 0, 0))
+    no-repeat;
+}
+.content {
+  width: 1000px;
+  height: 300px;
+  display: grid;
+  place-items: center;
+  background: url(img/nature.jpg) no-repeat center;
+  background-attachment: fixed;
+  /* background-size: cover; */
+  position: absolute;
+  clip-path: polygon(
+    0 91%,
+    0 10%,
+    6% 10%,
+    6% 0,
+    92% 0,
+    92% 11%,
+    100% 11%,
+    100% 30%,
+    100% 91%,
+    89% 91%,
+    89% 100%,
+    25% 100%,
+    7% 92%,
+    91% 91%,
+    92% 11%,
+    9% 10%,
+    8% 50%,
+    8% 93%,
+    88% 100%,
+    7% 100%,
+    7% 92%
+  );
+
+  /* z-index: -10; */
+}
+.text {
+  position: absolute;
+  width: 900px;
+  height: 250px;
+  background: transparent;
+  display: grid;
+  place-items: center;
+}
+h1 {
+  background: url(img/nature.jpg) center;
+  background-attachment: fixed;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 100px;
+  -webkit-text-stroke: 1px black;
+}

@@ -1,0 +1,23 @@
+.main{
+    width: 400px;
+    background: cornflowerblue;
+    color: white;
+    font-size: 24px;
+    letter-spacing: 3px;
+    word-spacing: 6px;
+    text-align: center;
+    line-height: 40px;
+    font-style: italic;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-shadow: -2px 2px 2px black;
+    -webkit-text-stroke: 1px black;
+    border: 6px solid blue;
+    outline: 6px dashed blue;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px black, 0px 0px 20px black inset;
+}
+
+/* this is a comment */
