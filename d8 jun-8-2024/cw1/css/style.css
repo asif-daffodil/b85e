@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    width: 200px;
+    height: 200px;
+    background: cornflowerblue;
+    transition: 0.5s;
+}
+
+.main:hover {
+    transform: translate(100px, 100px) rotate(45deg) scale(0.8) skew(20deg, -10deg);
+}

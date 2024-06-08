@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-gap: 20px;
+    padding: 20px;
+    place-items: center;
+}
+
+.main > .product {
+    box-shadow: 0 0 10px #333;
+    position: relative;
+}
+
+.main > .product > img {
+    width: 100%;
+    padding: 20px;
+}
+
+.main > .product > div {
+    padding: 0px 20px 20px;
+}
+
+.main > .product > div > h2 {
+    font-size: 1.5rem;
+    text-decoration: underline;
+    animation: amarMotonNam 2s infinite linear;
+}
+
+.main > .product > div > p:nth-child(2) {
+    font-size: 14px;
+    margin: 10px 0;
+    font-weight: bolder;
+}
+
+.main > .product > div > p:nth-child(2) > del {
+    color: #a3a3a3;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+.main > .product > div > p:nth-child(3) {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.main > .product > div > button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.main > .product> .rebon {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    overflow: hidden;
+}
+
+.main > .product> .rebon::before {
+    content: "Up to 150% Off";
+    background: red;
+    padding: 8px 40px;
+    width: max-content;
+    position: absolute;
+    top: 36%;
+    left: 64%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    color: #fff;
+    font-weight: 900;
+}
+
+.main > .product> .rebon > div:first-child {
+    width: 10px;
+    height: 10px;
+    background: darkred;
+    position: absolute;
+    z-index: -1;
+    left: 17px;
+}
+
+.main > .product> .rebon > div:last-child {
+    width: 10px;
+    height: 10px;
+    background: darkred;
+    position: absolute;
+    right: 0px;
+    top: 123px;
+    z-index: -1;
+}
+
+@media (max-width: 6.5in) {
+    .main {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (min-width: 6.5in) and (max-width: 12in) {
+    .main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 12in) {
+    .main {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@keyframes amarMotonNam {
+    0% {
+        opacity: 0.5;
+        color: blue;
+    }
+    50% {
+        opacity: 1;
+        color: red;
+    }
+    100% {
+        opacity: 0.5;
+        color: blue
+    }
+}

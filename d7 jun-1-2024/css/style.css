@@ -33,6 +33,10 @@
 
 .main > div {
     background: blue;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 20px;
+    padding: 20px;
 }
 
 .main > div:first-child {
@@ -70,6 +74,14 @@
 .main > div:last-child {
     grid-area: area9;
 }
+
+.main > div > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
 
 
 
