@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$color: #f15025;
+@mixin childCenter ($fs: 16px, $c: #000) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $fs;
+    color: $c;
+}
+
+p {
+    color: $color;
+}
+
+.taka {
+    @include childCenter(18px, #f15025);
+    height: 100vh;
+}
+
+.dhaka {
+    @include childCenter(24px, #2150f5);
+    height: 100vh;
+}
+
+.faka {
+    @extend .taka;
+}
+
+.abul{
+    width: 300px;
+    height: 300px;
+    >.babul{
+        width: 100px;
+        height: 100px;
+        &:hover{
+            background: #f15025;
+        }
+        &::before{
+            content: '';
+            width: 50px;
+            height: 50px;
+            background: #2150f5;
+        }
+    }
+}
