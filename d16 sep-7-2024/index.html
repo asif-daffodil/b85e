@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .textStyle {
+            font-size: 18px;
+            color: blue;
+            letter-spacing: 3px;
+            word-spacing: 6px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+    <div id="msg">Hello Everyone</div>
+    <button id="alrtbtn">Alert</button>
+    <button id="changeColor">Change color</button>
+    <button id="changeClass">Change Class</button>
+    <div id="countDown">0</div>
+    <div id="showdate"></div>
+    <script>
+        const alrtbtn = document.getElementById('alrtbtn');
+        const msg = document.getElementById('msg');
+        const changeColor = document.getElementById('changeColor');
+        const changeClass = document.getElementById('changeClass');
+        const countDown = document.getElementById('countDown');
+
+        alrtbtn.addEventListener('click', () => {
+            msg.textContent = 'Hello World';
+        });
+
+        alrtbtn.addEventListener('mouseout', () => {
+            msg.textContent = 'Hello Everyone';
+        });
+
+        changeColor.addEventListener('mouseenter', () => {
+            msg.style.color = 'red';
+        });
+
+        changeColor.addEventListener('mouseout', () => {
+            msg.style.color = 'black';
+        });
+
+        changeClass.addEventListener('mouseenter', () => {
+            msg.classList.add('textStyle');
+        });
+
+        changeClass.addEventListener('mouseout', () => {
+            msg.classList.remove('textStyle');
+        });
+
+        let count = 0;
+        setInterval(() => {
+            countDown.textContent = count;
+            count++;
+        }, 1000);
+        
+        // show time
+        // template string
+        // get data from form
+        // select children
+        // select parent
+        // Array from
+        // use of loop
+
+        const showDate = () => {
+            const d = new Date();
+            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            const week = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+            showdate.textContent = `${d.getDate()}/${months[d.getMonth()]}/${d.getFullYear()} ${week[d.getDay()]} ${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`;
+        }
+        showDate();
+        setInterval(showDate, 1000);
+    </script>
+</body>
+</html>
